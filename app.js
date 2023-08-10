@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const virtualSpacebar = document.getElementById("virtual-spacebar");
+  const virtualplaybutton = document.getElementById("virtual-playbutton");
 
 //              .:oshdmNMMNmdhs+:`           
 //         /ymMMMMMMMMMMMMMMMMMMmy:        
@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let h2 = document.querySelector("h2");
   let allBtns = document.querySelectorAll(".btn");
 
-  // Event listener to start the game on spacebar press
-  virtualSpacebar.addEventListener("click", startGame);
+  // Event listener to start the game on playbutton press
+  virtualplaybutton.addEventListener("click", startGame);
   document.addEventListener("keydown", function (event) {
-    if (!started && (event.key === " " || event.key === "Spacebar")) {
+    if (!started && (event.key === " " || event.key === "playbutton")) {
       startGame();
     }
   });
@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!started) {
       console.log("Game is started");
       started = true;
-      virtualSpacebar.style.boxShadow = "none";
-      virtualSpacebar.style.transition = "transform 500ms ease-in-out";
-      virtualSpacebar.style.transform = "translate(5px, 5px)";
+      virtualplaybutton.style.boxShadow = "none";
+      virtualplaybutton.style.transition = "transform 500ms ease-in-out";
+      virtualplaybutton.style.transform = "translate(5px, 5px)";
       levelUp();
     }
   }
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("gameOverSound").play();          
         }, 1)
         highScore = checkHighScore(level);
-        h2.innerHTML = `Game Over! Your score was: <b>${level}</b><br><b>High Score: ${highScore}</b><br>Press space to restart`;
+        h2.innerHTML = `Game Over!<br> <span style='color: #182848;'>YOUR CURRENT SCORE IS: <b>${level}</b>   |   <b>HIGH SCORE: ${highScore}</b></span> <br> Press WANT TO PLAY BUTTON!!! to restart`;
         document.querySelector("body").style.backgroundImage = 'linear-gradient(180deg, #ff0000 17%, #ff0000 100%)';
         setTimeout(function () {
           document.querySelector("body").style.backgroundImage = 'linear-gradient(180deg, #4dabf7 21%, #182848 77%)' ;
@@ -147,8 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     gameSeq = [];
     userSeq = [];
     level = 0;
-    virtualSpacebar.style.transition = "none";
-    virtualSpacebar.style.transform = "none";
+    virtualplaybutton.style.transition = "none";
+    virtualplaybutton.style.transform = "none";
   }
 });
 

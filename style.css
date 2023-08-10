@@ -21,12 +21,11 @@ html,body {
   border-radius: 20%;
   border: 4px solid black;
   margin: 0.5rem;
-  margin-top: 0;
   cursor: pointer;
 }
 
 h1 {
-  padding-top: 20px;
+  padding-top: 35px;
   font-size: 40px;
   text-decoration: underline white;
   position: relative;
@@ -145,7 +144,7 @@ p{
 }
 
 
-/* Spacebar */
+/* playbutton */
 
 .virtual-key {
   width: 324px;
@@ -169,7 +168,7 @@ p{
   background-color: black;
 }
 
-.spacebar {
+.playbutton {
   display: flex;
   justify-content: center;
 }
@@ -187,6 +186,11 @@ p{
 
 .credits svg:hover{
   scale: 1.2;
+}
+
+/* Disclaimer */
+.disclaimer{
+  color: white;
 }
 
 @media only screen and (max-width: 1025px) {

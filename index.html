@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icons8-gamer-64.png">
+  </head>
+  <body>
+      <!--    HAVE FUN POKING AROUND! 
+
+           .:oshdmNMMNmdhs+:`           
+        /ymMMMMMMMMMMMMMMMMMMmy:        
+     `sNMMMMMMMMMMMMMMMMMMMMMMMMNo`     
+    +NMMMMMMMMMMMMMMMMMMMMMMMMMMMMN+    
+   yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy   
+  oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo  
+ /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/ 
+/MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
+dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh
+NMMMMMMMMMMMMMmdysoooosydmMMMMMMMMMMMMMm
+MMMMMMMMmy+:.              .:oymMMMMMMMN
+MMMMMMh-                        -dMMMMMM
+MMMMMmoo+++++oo+:     `:+oo+++++oomMMMMM
+NMMNm:`        -odooosdo.        `/NNMMN
+mMMMo            -    -            sMMMd
+yMMm-`           -    -           `-mMMs
+/MMy -.        .-      -.        .- hMM/
+`NMs  `........          ........`  yMN 
+ +MN.                              `mM/ 
+  sMm           `:` `:`            hMy  
+  oMM+  +`   ./@bewithsnehasish/. :MMy  
+  mMMm-:dNdmNMMMMMMMMMMMMMMNmmNd:-hMMM` 
+ :MMMMMMMMMMMMMMNhs+oshNMMMMMMMMMMMMMM+ 
+ yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd 
+ yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd 
+ /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs 
+  mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN` 
+  -NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:  
+   -NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/   
+    .dMmMMMMMMMMMMMMMMMMMMMMMMMMmMm-    
+      odMMMMMMMMMMMMMMMMMMMMMMMMmo`     
+       oMMMMMMMMMMMMMMMMMMMMMMMMh       
+        oNNMMMMMMMMMMMMMMMMMMNMy`       
+         `-/mMMMMMMMMMMMMMMN+-.         
+             -oydNMMMMNdho:  
+
+-->
+    <h1>Simon <span>Says</span></h1>
+    <h2 id="h2"><span>Rule: </span> Press the buttons in the right order<br><br> Press <span>WANT TO PLAY</span> to start</h2>
+
+    <div class="box">
+      <a href="#popup-box">
+          Don't know how to Play !! <b>Click Me</b> 
+      </a>
+      </div>
+      <div id="popup-box" class="modal">
+        <div class="content">
+          <p><span class="heading">How to Play Simon Says in 8 Steps:</span>
+            <br>
+            <br>
+            <span>1.Watch the Pattern:</span>
+               Simon will light up buttons in a sequence.
+            <br>
+            <span>2.Remember the Sequence:</span>
+            Memorize the order in which the buttons light up.
+            <br>
+            <span>3.Replicate the Sequence:</span>
+            Click the buttons in the same order as Simon's sequence.
+            <br>
+            <span>4.Advance Levels:</span>
+            Correctly mimic the sequence to move to the next level.
+            <br>        
+            <span>5.Add More Steps:</span>
+            Each level adds another step to the sequence.
+            <br>        
+            <span>6.Stay Focused:</span>
+            Concentrate on the pattern and your clicks.
+            <br>        
+            <span>7.One Mistake Ends It:</span>
+            A wrong click ends the game.
+            <br>           
+            <span>8.Beat Your Record:</span>
+               Try to surpass your highest level for a better score.
+            </p>
+              <a href="#"class="box-close">×</a>
+            </div>
+          </div>
+
+    <div class="btn-container">
+      <div class="line-one">
+        <div class="btn red" type="button" id="red"></div>
+        <div class="btn yellow" type="button" id="yellow"></div>
+      </div>
+      <div class="line-two">
+        <div class="btn green" type="button" id="green"></div>
+        <div class="btn purple" type="button" id="purple"></div>
+      </div>
+    </div>
+    <div class="spacebar">
+      <div class="virtual-key" id="virtual-spacebar" type="button">
+        <span>WANT TO PLAY !!!</span>
+      </div>
+    </div>
+
+    <div class="credits">
+      Made by: Snehasish Mandal
+      <div class="credits-icon">
+        <a href="https://github.com/bewithsnehasish" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27c.68 0 1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a href="https://twitter.com/bewithsnehasish"target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M17.71 9.33c.48-.4 1.04-.88 1.29-1.41c-.41.21-.9.34-1.44.41c.5-.36.91-.83 1.12-1.47c-.52.28-1.05.52-1.71.64c-1.55-1.87-5.26-.35-4.6 2.45c-2.61-.16-4.2-1.34-5.52-2.79c-.75 1.22-.1 3.07.79 3.58c-.46-.03-.81-.17-1.14-.33c.04 1.54.89 2.28 2.08 2.68c-.36.07-.76.09-1.14.03c.37 1.07 1.14 1.74 2.46 1.88c-.9.76-2.56 1.29-3.9 1.08c1.15.73 2.46 1.31 4.28 1.23c4.41-.2 7.36-3.36 7.43-7.98M12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2z" fill="currentColor"/></svg></a>
+        <a href="https://www.linkedin.com/in/bewithsnehasish"target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></a>
+        <a href="https://www.instagram.com/snehasish_mandal_/"target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 72a24 24 0 1 1 24-24a24 24 0 0 1-24 24Zm48-132H80a60.07 60.07 0 0 0-60 60v96a60.07 60.07 0 0 0 60 60h96a60.07 60.07 0 0 0 60-60V80a60.07 60.07 0 0 0-60-60Zm36 156a36 36 0 0 1-36 36H80a36 36 0 0 1-36-36V80a36 36 0 0 1 36-36h96a36 36 0 0 1 36 36ZM196 76a16 16 0 1 1-16-16a16 16 0 0 1 16 16Z"/></svg></a>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <audio id="gameOverSound" volume="1000" src="chala-ja-bsdk.mp3"></audio>
+
+  </body>
+</html>
